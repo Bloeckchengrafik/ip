@@ -7,7 +7,9 @@ description: "7 Segment Display"
 filesets:
   lib:
     files:
-      - rtl/lib/nibble_7seg.sv
+      - rtl/lib/sevseg_4mul.sv
+      - rtl/lib/sevseg_nibble_conv.sv
+      - rtl/lib/sevseg_one.sv
     file_type: systemVerilogSource
 
 targets:

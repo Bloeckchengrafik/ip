@@ -15,6 +15,12 @@ filesets:
     files:
       - ../boards/boolean.xdc
     file_type: xdc
+  sim:
+    files:
+      - rtl/tb/7seg_tb.sv
+    file_type: systemVerilogSource
+    depend:
+      - bloeckchengrafik:ip:7seg:0.1.0
 
 targets:
   default: &default
@@ -24,6 +30,16 @@ targets:
     toplevel: boolean_top
     description: Synthesize the design for the boolean board
     flow: vivado
-    default_tool: vivado
     flow_options:
       part: xc7s50csga324-2
+
+  sim:
+    filesets:
+      - sim
+    toplevel: sevseg_4mul_tb
+    description: Simulate the 7-segment display peripheral
+    default_tool: icarus
+    tools:
+      icarus:
+        iverilog_options:
+          - -g2012
