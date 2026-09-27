@@ -1,0 +1,29 @@
+CAPI=2:
+# SPDX-License-Identifier: MIT
+
+name: bloeckchengrafik:ip:7seg_synth:0.1.0
+description: "7 Segment Display Synth target"
+
+filesets:
+  board:
+    files:
+      - rtl/board/boolean_top.sv
+    file_type: systemVerilogSource
+    depend:
+      - bloeckchengrafik:ip:7seg:0.1.0
+  constraints:
+    files:
+      - ../boards/boolean.xdc
+    file_type: xdc
+
+targets:
+  default: &default
+    filesets:
+      - board
+      - constraints
+    toplevel: boolean_top
+    description: Synthesize the design for the boolean board
+    flow: vivado
+    default_tool: vivado
+    flow_options:
+      part: xc7s50csga324-2
