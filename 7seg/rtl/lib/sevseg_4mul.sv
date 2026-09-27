@@ -5,7 +5,7 @@ module sevseg_4mul (
     output logic [7:0] o_seg
 );
 
-logic [17:0] nibble_sel_and_ctr;
+logic [17:0] nibble_sel_and_ctr = 18'd0;
 logic [1:0] nibble_sel;
 assign nibble_sel = nibble_sel_and_ctr[17:16];
 

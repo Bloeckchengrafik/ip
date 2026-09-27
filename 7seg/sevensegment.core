@@ -10,6 +10,7 @@ filesets:
       - rtl/lib/sevseg_4mul.sv
       - rtl/lib/sevseg_nibble_conv.sv
       - rtl/lib/sevseg_one.sv
+      - rtl/lib/sevseg_wb.sv
     file_type: systemVerilogSource
 
 targets:

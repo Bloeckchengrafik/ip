@@ -6,8 +6,8 @@ module boolean_top (
     output logic [7:0] D1_SEG
 );
 
-logic [31:0] number;
-logic [31:0] next_count_timer;
+logic [31:0] number = 32'd0;
+logic [31:0] next_count_timer = 32'd100000;
 
 sevseg_4mul m_d0 (
 		.i_clk (clk),
