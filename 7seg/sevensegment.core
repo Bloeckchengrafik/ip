@@ -1,0 +1,16 @@
+CAPI=2:
+# SPDX-License-Identifier: MIT
+
+name: bloeckchengrafik:ip:7seg:0.1.0
+description: "7 Segment Display"
+
+filesets:
+  soc_files:
+    files:
+      - nibble_7seg.sv
+    file_type: systemVerilogSource
+
+targets:
+  default:
+    filesets:
+      - soc_files
